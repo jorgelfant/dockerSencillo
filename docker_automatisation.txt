@@ -1,0 +1,10 @@
+LAST PART OF THIS COURSE
+========================
+
+Docker en la automatisation:
+
+* Dar imagenes ya creadas
+* Poder coger de un repositorio
+* Depende de cada organisation y su workflow
+* Convierte infraestructura en programa
+* DOCKER es parte de CI / CD

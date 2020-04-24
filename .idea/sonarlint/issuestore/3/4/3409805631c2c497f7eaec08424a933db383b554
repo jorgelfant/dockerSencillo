@@ -1,0 +1,9 @@
+
+S	java:S1069"9Replace this use of System.out or System.err by a logger.(Ø½‹‰şÿÿÿÿ
+i
+java:S2095 "GUse try-with-resources or close this "Statement" in a "finally" clause.(üÏ®Áûÿÿÿÿ8Èø‹ãš.
+i
+java:S2095!"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(°£õ×ùÿÿÿÿ8Èø‹ãš.
+N	java:S106"9Replace this use of System.out or System.err by a logger.(µÙ·
+_
+java:S21470"DCombine this catch with the one at line 46, which has the same body.(‰Ü³ˆÿÿÿÿÿ
