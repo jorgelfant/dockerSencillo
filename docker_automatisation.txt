@@ -1,10 +1,79 @@
 LAST PART OF THIS COURSE
 ========================
 
+Docker en la cadena de suministro de software VIDEO 64
+=============================================
+
 Docker en la automatisation:
 
-* Dar imagenes ya creadas
-* Poder coger de un repositorio
-* Depende de cada organisation y su workflow
-* Convierte infraestructura en programa
-* DOCKER es parte de CI / CD
+     * Dar imagenes ya creadas
+     * Poder coger de un repositorio
+     * Depende de cada organisation y su workflow
+     * Convierte infraestructura en programa
+     * DOCKER es parte de CI / CD
+
+Docker funciona un poco como MAVEN, en un equipo por ejemplo uno del equipo podria a partir de dockerfile crear una imagen
+y esa imagen ponerla por ejemplo en un repositorio GIT y asi los otros desarrolladores solo tendrian que descargar esta
+imagen.
+
+La utilizacion de DOCKER depende de cada organisation y de la infraestructura, ese concepto de la cadena de suministros
+es decir desde que un programador desarrolla algo hasta que eso llega a production ahi depende mucho de cual sea
+el ciclo (o workflow) de cada organisation.
+
+Si nos damos cuenta una de las cosas que nos permite DOCKER, es por ejemplo TRANSFORMAR la INSTALLATION y la CONFIGURATION
+de un SERVER (WILDFLY por ejemplo) y/o una DATABASE en un fichero de texto --UN SCRIPT--
+
+Esto nos permite decirnos que si una infraestructura somos capaces de convertirla en un SCRIPT, ese script lo puedo
+meter en un CONTROL DE VERSIONES , en --GIT-- por ejemplo (el DOCKERFILE).
+
+Con esto lo que realmente conseguimos es convertir una infraestructura en un PROGRAMA , en un script.
+
+Igual como lo podemos meter en GIT (control de versiones), puedo hacer BRANCHS, TAGS, etc
+es decir lo mismo que puedo hacer con un software. Esto quiere decir que que me impide tener una IMAGE
+igual que yo tengo en la MASTER con GIT. YO TENGO EN LA MASTER supongamos lo que hemos puesto en production.
+
+Y luego tengo una serie de ramas, eso con el codigo que en el caso de un programa para nosotros es habitual.
+
+Podriamos tener una IMAGE que sea aquella de PRODUCTION y diferentes BRANCHS con las siguientes VERSIONS.
+Asi como por ejemplo tenermos una BRANCH que sirve a implementar una funcionalidad, porque no tener una BRANCH
+con la iMAGE para implementar una determinada funcionalidad y tengo el CODE y la INFRAESTRUCTURA .
+
+Igual que yo puedo automatisar la generacion del programa, que es la integracin continua , la entrega continua ,
+despliegue continuo.
+
+Puedo hacer lo mismo con DOCKER porque he convertido la instalacion de una infraestructura, en un SOFTWARE y lo
+puedo gestionar exactamente igual.
+
+VAMOS A UTILISAR LA HERRAMIENTA QUE PROPONER EL MISMO DOCKER: DOCKER-HUB , se basa en tener un repositorio
+que es GIT, yo subo mi DOCKERFILE con los ficheros anexos a git y luego en otro lado igual que tenemos nuestras
+herramientas de integracion continua de typo ATLASSIAN, JENKINS, GITLAB... DOCkER tiene del mismo modo una
+integracion continua que nos va permitir coger este software que es el DOCKERFILE y compilarlo , igual que
+compilariamos una aplicacion y generabamos un executable que puede ser un .exe . Pues aqui vamos a coger el codigo fuente
+de nuestro programa que es una imagen de docker. Con una integracion continua, cada vez que hay un cambio aqui (imagino en
+git ) vamos a coger con la IC de docker y vamos a generar un ejecutable --LA IMAGE--
+
+Y lo qu evamos a poder hacer, es que el mismo ciclo que tenemos con el software, que nosotros cogemos, subimos algo
+al repositorio, la integracion continua lo compila , si esta toodo correcto genera un executable --un ARTIFACT--
+pues aqui va ser exactamente igual. la infraestructura que vamos a ver es gratuita aqui que los proyectos que dejemos ahi
+van a ser publicos.
+
+De esta manera, asi como nosotros buscamos imagenes en docker-hub, como por ejemplo la de WILDFLY, y toda la gente
+que ha personalisado su wildfly, pues nosotros vamos a poder tener nuestro propio WILDFLY ahi configurado.
+
+Hay tambien opciones de pago para las imagenes privadas, pero esto ya depende de la filosofia de la organisation.
+
+ESTO nos facilita tener ya las infraestructuras configuradas
+
+
+
+
+
+
+
+
+
+
+
+
+
+
