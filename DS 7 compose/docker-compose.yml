@@ -1,6 +1,7 @@
 version: '2'
 services:
   web:
+    container_name: "server_wildfly"
     image: "miwildfly:7"
     ports:
      - "8080:8080"
@@ -8,6 +9,7 @@ services:
     links:
      - basedatos:mimariadb
   basedatos:
+    container_name: "database"
     image: "mibasedatos:latest"
     ports:
      - "3306:3306"
